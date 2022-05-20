@@ -1,0 +1,33 @@
+body {
+    position: relative;
+    background-color: rgb(39, 125, 171);
+    background-size: cover;
+    background-image: linear-gradient(rgb(30, 79, 147), rgb(167, 167, 167));
+    height: 100%;
+}
+.dog-form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.dog-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.dog-d {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 100px;
+    
+}
+button {
+    margin-top: 20px;
+    position: relative;
+    width: 50%;
+}
