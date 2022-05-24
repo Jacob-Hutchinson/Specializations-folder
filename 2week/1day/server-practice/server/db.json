@@ -1,0 +1,17 @@
+[
+    {
+    "name": "jacob",
+    "age": 25,
+    "favoriteSport": "surfing"
+    },
+    {
+        "name": "jeremy",
+        "age": 27,
+        "favoriteSport": "soccer"
+    },
+    {
+        "name": "natalia",
+        "age": 24,
+        "favoriteSport": "climbing"
+    }
+]
