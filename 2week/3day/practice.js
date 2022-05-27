@@ -9,9 +9,9 @@ function processData(input) {
 
 
 processData('S;V;iPad')
-// processData('C;M;mouse pad')
-// processData('C;C;code swarm')
-// processData('S;C;OrangeHighlighter')
+processData('C;M;mouse pad')
+processData('C;C;code swarm')
+processData('S;C;OrangeHighlighter')
 
 
 
