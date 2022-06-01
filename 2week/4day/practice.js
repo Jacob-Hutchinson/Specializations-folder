@@ -1,26 +1,38 @@
 function processData(input) {
-  let arr = input.split("");
-  if (arr[0] === "S") {
-    if (arr[2] === "V") {
-      arr.splice(0, 4);
+    function combine() {}
+    function split() {}
+
+    function processsV(input) {
+        arr.splice(0, 4);
       for (let i = 0; i < arr.length; i++) {
         if (arr[i] === arr[i].toUpperCase()) {
           arr[i] = arr[i].toLowerCase();
           arr.splice(i, 0, " ");
         }
       }
+    }
+    function processC(input) {
 
-      if (arr[2] === "C") {
-        arr.splice(0, 4);
-        arr[0] = arr[0].toUpperCase();
-        for (let i = 1; i < arr.length; i++) {
-          if (arr[i] === arr[i].toUpperCase()) {
-            arr[i] = arr[i].toLowerCase();
-            Console.log(arr)
-            arr.splice(i, 0, " ");
-          }
-        }
-      }
+        
+            arr.splice(0, 4);
+            arr[0] = arr[0].toUpperCase();
+            for (let i = 1; i < arr.length; i++) {
+              if (arr[i] === arr[i].toUpperCase()) {
+                arr[i] = arr[i].toLowerCase();
+                Console.log(arr)
+                arr.splice(i, 0, " ");
+              }
+            }
+    }
+
+    function processM(input) {}
+  let arr = input.split("");
+  if (arr[0] === "S") {
+      split()
+    if (arr[2] === "V") {
+      processsV() //pass data 
+
+      
       if (arr[2] === "M") {
         arr.splice(0, 4);
         for (let i = 0; i < arr.length; i++) {
@@ -32,6 +44,9 @@ function processData(input) {
           arr.push(")");
         }
       }
+    }
+    if (arr[2] === "C") {
+        processC()
     }
   } else if (arr[0] === "C") {
     if (arr[2] === "V") {
