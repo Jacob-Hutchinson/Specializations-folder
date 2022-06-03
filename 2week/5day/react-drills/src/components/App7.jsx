@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 
 const App7 = () => {
     const [name, setName] = useState("");
-    const [list, setList] = useState([])
+    const [list, setList] = useState([]);
+    const dog = 'dog'
 
   const handleSubmit = e => {
     e.preventDefault();

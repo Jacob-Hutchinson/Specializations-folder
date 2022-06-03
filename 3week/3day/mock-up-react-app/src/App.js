@@ -1,10 +1,12 @@
 import './App.css';
-import Main from './Components/Main';
+import App1 from './components/App1'
+import {Button} from 'antd'
+
 
 function App() {
   return (
     <div className="App">
-      <Main />
+     <App1 />
     </div>
   );
 }
