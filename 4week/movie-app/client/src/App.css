@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  /* background-image: url('https://payload.cargocollective.com/1/11/367710/13568488/MOVIECLASSICSerikweb_2500_800.jpg'); */
+  background-image: url(../public/images/homeimg.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  color: rgb(255, 255, 255);
+}
