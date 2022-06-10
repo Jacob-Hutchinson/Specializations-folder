@@ -56,7 +56,9 @@ module.exports= {
             .catch(err => console.log(err))
         },
         getByGenre: (req, res) => {
-            const genre = req.body.genre
+            const {genre, date, date1} = req.body
+            console.log(genre, ' ', date, ' ', date1)
+            
             console.log(genre)
             const findGenre = () => {
                 console.log('hit findG')

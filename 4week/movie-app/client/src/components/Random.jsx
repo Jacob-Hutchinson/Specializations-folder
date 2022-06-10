@@ -13,11 +13,13 @@ export const Random = () => {
   const [desc, setDesc] = useState("");
   const [providers, setProviders] = useState([]);
   const [option, setOption] = useState("");
+  const [date, setDate] = useState('')
+  const [date1, setDate1] = useState('')
 
   
   const handleClick = (e) => {
     e.preventDefault()
-    axios.post(`http://localhost:4004/genre`, { genre: option })
+    axios.post(`http://localhost:4004/genre`, { genre: option, date: date, date1: date1 })
     .then((res) => {
       setMovieTitle(res.data.title);
       setMoviePoster(res.data.poster_path);
@@ -29,6 +31,12 @@ export const Random = () => {
   const handleOption = (e) => {
     setOption(e.target.value);
   };
+  const handleDate = e => {
+    setDate(e.target.value)
+  }
+  const handleDate1 = e => {
+    setDate1(e.target.value)
+  }
   return (
     <div>
       {/* <FormControl>
@@ -53,6 +61,8 @@ export const Random = () => {
           <option value="878">Sci-Fi</option>
           <option value="53">Thriller</option>
         </select>
+        <input type="date" onChange={handleDate}/>
+        <input type="date" onChange={handleDate1}/>
         <input type="submit" value="submit" />
       </form>
       <br />
