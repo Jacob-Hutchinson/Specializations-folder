@@ -1,0 +1,23 @@
+#navbar {
+    position:fixed;
+    height: 100%;
+    top:0;
+    left:0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+}
+  body {
+      text-align: center;
+  }
+  a {
+      cursor: help;
+  }
+
+
+  @media screen and (max-width: 500px){
+      body {
+          background-color: grey;
+      }
+  }
