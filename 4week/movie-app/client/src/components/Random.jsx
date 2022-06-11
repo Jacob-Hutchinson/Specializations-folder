@@ -21,11 +21,17 @@ export const Random = () => {
     e.preventDefault()
     axios.post(`http://localhost:4004/genre`, { genre: option, date: date, date1: date1 })
     .then((res) => {
-      setMovieTitle(res.data.title);
-      setMoviePoster(res.data.poster_path);
-      setDesc(res.data.overview);
-      setProviders(res.data.results.US.flatrate);
-      console.log(res.data.title, ' ', res.data.genres);
+      if(res.data.title){
+        setMovieTitle(res.data.title);
+        setMoviePoster(res.data.poster_path);
+        setDesc(res.data.overview);
+        if(res.data.results.US){
+          setProviders(res.data.results.US.flatrate);
+        }
+      }else{
+        alert('no movie was found')
+      }
+      console.log(res.data.release_date, ' ', res.data.genres);
     });
   };
   const handleOption = (e) => {

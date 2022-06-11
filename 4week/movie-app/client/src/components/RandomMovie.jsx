@@ -17,7 +17,9 @@ export const RandomMovie = () => {
         setMovieTitle(res.data.title);
         setMoviePoster(res.data.poster_path);
         setDesc(res.data.overview);
+        if(res.data.results.US){
         setProviders(res.data.results.US.flatrate);
+        }
       });
   };
 
