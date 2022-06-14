@@ -3,8 +3,6 @@ import axios from "axios";
 import { WatchProvider } from "./WatchProvider";
 import { RandomMovie } from "./RandomMovie";
 import {FormControl, Select, MenuItem, Button} from '@mui/material'
-import FormLabel from '@mui/material/FormLabel'
-import FormHelperText from '@mui/material/FormHelperText'
 
 
 export const Random = () => {
@@ -67,9 +65,10 @@ export const Random = () => {
           <option value="878">Sci-Fi</option>
           <option value="53">Thriller</option>
         </select>
-        <input type="date" onChange={handleDate}/>
-        <input type="date" onChange={handleDate1}/>
-        <input type="submit" value="submit" />
+        <input  type="date" onChange={handleDate} required/>
+        <input type="date" onChange={handleDate1} required/>
+        <Button variant="contained" color="secondary" type="submit">submit</Button>
+
       </form>
       <br />
       {movieTitle}

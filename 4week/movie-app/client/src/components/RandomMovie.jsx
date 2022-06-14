@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { WatchProvider } from "./WatchProvider";
 import "../styles/randommovie.css";
-import {Button} from 'antd'
+import Button from '@mui/material/Button'
 
 
 export const RandomMovie = () => {
@@ -25,10 +25,15 @@ export const RandomMovie = () => {
 
   return (
     <div>
-      <Button onClick={handleClick}>Get a random Movie</Button>
+      <Button variant="contained" color="secondary" onClick={handleClick}>Get a random Movie</Button>
       <br />
+      <h1>
       {movieTitle}
-      <div style={{ display: "flex" }}>
+      </h1>
+      {movieTitle && <Button variant="contained" color="secondary">
+        Add to watchlist
+      </Button>}
+      <div style={{ display: "flex", alignItems: ""}}>
         {movieTitle && (
           <img
             src={`https://image.tmdb.org/t/p/w500${moviePoster}`}

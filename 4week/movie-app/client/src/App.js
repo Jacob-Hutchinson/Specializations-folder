@@ -6,6 +6,7 @@ import { Random } from "./components/Random";
 import { Watchlist } from "./components/Watchlist";
 import { Home } from "./components/Home";
 
+
 function App() {
   return (
     <div className="App">
@@ -14,8 +15,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route element={<RandomMovie />} path="/randomMovie" />
+        <Route element={<Random/>} path='random'/>
         <Route element={<Watchlist />} path='/watchlist'/>
-        <Route element={<Random />} path='random'/>
       </Routes>
     </div>
   );

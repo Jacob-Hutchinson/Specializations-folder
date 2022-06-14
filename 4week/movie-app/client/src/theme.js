@@ -5,7 +5,7 @@ let theme = createTheme({
         type: 'dark',
         primary: {
           main: '#43a047',
-          light: '#ffffff',
+          light: '#000000',
           dark: '#ffffff',
         },
         background: {
