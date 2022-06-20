@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { WatchProvider } from "./WatchProvider";
 import { RandomMovie } from "./RandomMovie";
-import {FormControl, Select, MenuItem, Button} from '@mui/material'
+import {FormControl, Select, MenuItem, Button, FormLabel} from '@mui/material'
 
 
 export const Random = () => {
@@ -43,17 +43,18 @@ export const Random = () => {
   }
   return (
     <div>
-      {/* <FormControl>
-        <FormLabel id='form' sx={{color: "white"}}>select a genre</FormLabel>
-        <Select labelId="form" variant="standard">
+      <FormControl color="secondary">
+        <FormLabel id='form' sx={{backgroundColor: "lightgrey", margin: "20px"}} color="secondary">select a genre</FormLabel>
+      <div style={{backgroundColor: "white"}}>
+        <Select labelId="form" variant="standard" color="secondary">
           <MenuItem value=''></MenuItem>
           <MenuItem value='action'>Action</MenuItem>
           <MenuItem value='aomedy'>Comedy</MenuItem>
           <MenuItem value='adventure'>Adventure</MenuItem>
         </Select>
+      </div>
         
-        <FormHelperText></FormHelperText>
-      </FormControl> */}
+      </FormControl>
       <form typeof="submit" onSubmit={handleClick}>
         <select name="" id="" onChange={handleOption}>
           <option value=""></option>

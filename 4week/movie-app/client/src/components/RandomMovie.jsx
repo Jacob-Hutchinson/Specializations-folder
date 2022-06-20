@@ -13,7 +13,8 @@ export const RandomMovie = () => {
 
   const handleClick = () => {
     // movieList?setMovieList(''): axios.get(`http://localhost:4004/movies`).then(res => {console.log(res.data.title)setMovieList(res.data)})
-      axios.get(`http://localhost:4004/movies`).then((res) => {
+      axios.get(`http://localhost:4004/movies`)
+      .then((res) => {
         setMovieTitle(res.data.title);
         setMoviePoster(res.data.poster_path);
         setDesc(res.data.overview);

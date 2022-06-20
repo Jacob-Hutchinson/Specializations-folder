@@ -45,6 +45,7 @@ let theme = createTheme({
         button: {
           fontFamily: 'Ubuntu Mono',
           fontWeight: 900,
+          textDecoration: 'none',
         },
         overline: {
           fontFamily: 'Ubuntu Mono',

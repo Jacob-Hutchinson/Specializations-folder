@@ -47,11 +47,6 @@ module.exports= {
                 res.status(200).send(dbObj)
             }))
             .catch(err => console.log(err))
-
-            // .get(`${BASEURL}movie/${idArr[randomID]}?api_key=${KEY}&language=en-US`)
-            // .then(dbres2 => {
-            //     res.status(200).send(dbres2.data)
-            // })
             })
             .catch(err => console.log(err))
         },

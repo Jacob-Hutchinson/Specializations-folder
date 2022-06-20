@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import { Toolbar, Button,  } from '@mui/material';
 import {useAuth0} from '@auth0/auth0-react'
@@ -7,9 +7,12 @@ import '../styles/navbar.css'
 const Navbar = () => {
   const {loginWithPopup, logout, user, isAuthenticated,} = useAuth0()
   const [login, setLogin] = useState(false)
-  // if(user) {
-  //   setLogin(true)
-  // }
+  
+  useEffect(() => {
+    if(user) {
+      setLogin(true)
+    }
+  })
 
   return (
     <header style={{display: 'flex'}}>
