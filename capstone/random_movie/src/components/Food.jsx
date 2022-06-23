@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-export const Food = () => {
+export const Food = (props) => {
+  const {route, setRoute} = props
+
+  useEffect(() => {
+    setRoute('Food')
+  }, [route])
   return (
     <div>Food</div>
   )

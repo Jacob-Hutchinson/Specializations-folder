@@ -1,0 +1,48 @@
+img {
+    position: relative;
+    width: 20vw;
+}
+.getButton {
+    position: absolute;
+}
+.selector {
+    /* position: absolute; */
+}
+.form {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.movie-div {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.movieCard {
+    position: relative;
+    left: 25px;
+    display: flex;
+    width: fit-content;
+}
+.image {
+    padding: 20px;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.movieDescription {
+    display: flex;
+}

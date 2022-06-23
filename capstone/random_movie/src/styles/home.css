@@ -1,3 +1,7 @@
-.home {
-    
+.homepage {
+    text-align: center;
+    font-family:fantasy;
+}
+p {
+    font-size: larger;
 }

@@ -11,13 +11,13 @@ function App() {
   const [route, setRoute] = useState('home')
   return (
     <div className={`${route} App`} >
-      <h1>Movie selesctor</h1>
-      <NavBar changeClassName={setRoute}/>
+      <h1 className='navbar'>Movie/Food Generator</h1>
+      <NavBar setRoute={setRoute} className="navbar"/>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/movie' element={<Movie />} />
-        <Route path='/food' element={<Food />} />
-        <Route path='/list' element={<List />} />
+        <Route path='/' element={<Home setRoute={setRoute} route={route}/>} />
+        <Route path='/movie' element={<Movie setRoute={setRoute} route={route}/>} />
+        <Route path='/food' element={<Food setRoute={setRoute} route={route}/>} />
+        <Route path='/list' element={<List setRoute={setRoute} route={route}/>} />
       </Routes>
     </div>
   );

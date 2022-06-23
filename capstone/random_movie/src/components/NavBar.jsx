@@ -1,31 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button'
+import '../styles/navbar.css'
 
 export const NavBar = (props) => {
-    const {changeClassName} = props
+    const {setRoute} = props
     const handleClick = (str) => {
-        changeClassName(str.target.textContent)
+      console.log(str)
+      setRoute(str.target.id)
     }
   return (
-    <div>
+    <div className='bar'>
         <Link to={'/'}>
-            <Button variant="outlined" color="primary" onClick={handleClick} sx={{textdecoration: 'none'}}>
+            <Button variant="outlined" color="primary" onClick={handleClick} id='Home'>
               Home
             </Button>
         </Link>
         <Link to={'/movie'}>
-            <Button variant="outlined" color="primary" onClick={handleClick}>
+            <Button variant="outlined" color="primary" onClick={handleClick} id='Movies'>
               Movies
             </Button>
         </Link>
         <Link to={'/food'}>
-            <Button variant="outlined" color="primary" onClick={handleClick}>
+            <Button variant="outlined" color="primary" onClick={handleClick} id='Food'>
               Food
             </Button>
         </Link>
         <Link to={'/list'}>
-            <Button variant="outlined" color="primary">
+            <Button variant="outlined" color="primary" onClick={handleClick} id="List">
               List
             </Button>
         </Link>

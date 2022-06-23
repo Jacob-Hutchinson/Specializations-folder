@@ -7,6 +7,11 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+const {getPopMovie, genreMovie} = require('./controller')
+
+app.get('/movie', getPopMovie)
+app.post('/movie', genreMovie)
+
 
 const port = process.env.PORT || 4004
 
