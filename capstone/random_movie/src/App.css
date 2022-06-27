@@ -6,7 +6,7 @@ html {
   /* background-attachment: fixed; */
   background-size: cover;
 }
-.App {
+.App{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +39,7 @@ html {
   background-attachment: fixed;
   background-color: #464646;
   height: 100vh;
+  overflow-y: scroll;
 }
 .Food {
   background-image: url(../images/food.jpeg);
@@ -46,6 +47,7 @@ html {
   background-size: cover;
   background-color: #464646;
   height: 100vh;
+  overflow-y: scroll;
 }
 .List {
   background-image: url(../images/home.jpeg);

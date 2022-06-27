@@ -7,12 +7,15 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const {getPopMovie, genreMovie} = require('./controller')
+const {getPopMovie, genreMovie, getFood, addMovie, displayList} = require('./controller')
 
 app.get('/movie', getPopMovie)
 app.post('/movie', genreMovie)
+app.get('/food', getFood)
+app.post('/list', addMovie)
+app.get('/list', displayList)
 
 
-const port = process.env.PORT || 4004
+const {SERVER_PORT} = process.env  || 4004 
 
-app.listen(port, () => console.log(`listening on port ${port}`))
+app.listen(SERVER_PORT, () => console.log(`listening on port ${SERVER_PORT}`))

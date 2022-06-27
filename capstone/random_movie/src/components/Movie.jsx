@@ -6,6 +6,7 @@ import Button from '@mui/material/Button'
 import { Providers } from './Providers'
 
 
+
 export const Movie = (props) => {
   const [movie, setMovie] = useState()
   const [genre, setGenre] = useState('')
@@ -47,6 +48,13 @@ export const Movie = (props) => {
   const handledate1 = (e) => {
     setDate1(e.target.value)
   }
+  const addList = e => {
+    e.preventDefault()
+    axios.post('http://localhost:4004/list', {id: movie.id})
+    .then(res => {
+      
+    })
+  }
 
   return (
     <div className='movie-div'>
@@ -54,7 +62,8 @@ export const Movie = (props) => {
       <div className='form'>
       <Button variant="contained" color="primary" size='small' onClick={getmovie}>
         Get Random Movie
-      </Button>
+      </Button> 
+      <br />
       <form className="selector" onSubmit={handleForm}>
         <select name="genre" id="genre" onChange={handleGenre} style={{width: "125px"}} required>
         <option value=""></option>
@@ -77,6 +86,16 @@ export const Movie = (props) => {
       </div>
       <br />
       <MovieCard movie={movie} />
+      {movie &&
+      <Button variant="contained" color="primary" onClick={addList}>
+        Add to List
+      </Button>}
+      {movie ? movie.results.US ?
+      <Providers movie={movie}/> : <></> : <></>}
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   )
 }
