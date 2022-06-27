@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../styles/movie.css'
-import { Providers } from './Providers'
 
 export const MovieCard = ({movie}) => {
   

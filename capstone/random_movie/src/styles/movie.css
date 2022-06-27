@@ -5,9 +5,7 @@ img {
 .getButton {
     position: absolute;
 }
-.selector {
-    /* position: absolute; */
-}
+
 .form {
     /* position: absolute; */
     display: flex;
