@@ -129,7 +129,7 @@ module.exports = {
         movieId.push(el.movie_id)
       })
       // movieId.push(sqlres[0][0].movieId)
-      console.log(movieId)
+      // console.log(movieId)
     })
   },
   displayList: (req,res) => {
@@ -155,5 +155,16 @@ module.exports = {
         }))
     })
     .catch(err => console.log(err))
+  },
+  deleteMovie: (req, res) => {
+    console.log(req.params.id)
+    sequelize.query(`
+    delete from movieID
+    where movie_id = '${req.params.id}';
+    `)
+    .then(dbres => {
+      console.log(dbres.data)
+      res.status(200).send(dbres.data)
+    })
   }
 };
