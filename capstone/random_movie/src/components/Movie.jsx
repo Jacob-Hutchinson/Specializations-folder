@@ -4,6 +4,9 @@ import '../styles/movie.css'
 import { MovieCard } from './MovieCard'
 import Button from '@mui/material/Button'
 import { Providers } from './Providers'
+import FormControl from '@mui/material/FormControl'
+import { InputLabel, Select, MenuItem } from '@mui/material'
+// for date picker
 
 
 
@@ -67,9 +70,10 @@ export const Movie = (props) => {
       <Button variant="contained" color="primary" size='small' onClick={getmovie}>
         Get Random Movie
       </Button> 
+      <h2>OR</h2>
       <br />
       <form className="selector" onSubmit={handleForm}>
-        <select name="genre" id="genre" onChange={handleGenre} style={{width: "125px"}} required>
+        {/* <select name="genre" id="genre" onChange={handleGenre} style={{width: "125px"}} required>
         <option value=""></option>
           <option value="28">action</option>
           <option value="35">Comedy</option>
@@ -78,13 +82,32 @@ export const Movie = (props) => {
           <option value="14">Fantasy</option>
           <option value="878">Sci-Fi</option>
           <option value="53">Thriller</option>
-        </select>
+        </select> */}
+        <FormControl>
+          <InputLabel id=''>Genre</InputLabel>
+          <Select
+          value={genre}
+          label="genre"
+          onChange={handleGenre}
+          required
+          sx={{width: "125px", height: "40px"}}
+          >
+            <MenuItem value=''></MenuItem>
+            <MenuItem value='28'>Action</MenuItem>
+            <MenuItem value="35">Comedy</MenuItem>
+            <MenuItem value="12">Adventure</MenuItem>
+            <MenuItem value="18">Drama</MenuItem>
+            <MenuItem value="14">fantasy</MenuItem>
+            <MenuItem value="878">Sci-Fi</MenuItem>
+            <MenuItem value="53">Thriller</MenuItem>
+          </Select>
+        </FormControl>
         <label htmlFor="date">From</label>
         <input type="date" onChange={handledate}/>
         
         <label htmlFor="date1">To</label>
         <input type="date"  onChange={handledate1}/>
-      <Button variant="contained" color="primary" className='getButton' type='submit'>
+      <Button variant="contained" color="primary" size='small' className='getButton' type='submit'>
         Generate Movie
       </Button>
       </form>

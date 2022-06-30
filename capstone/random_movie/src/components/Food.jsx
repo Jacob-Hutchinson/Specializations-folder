@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import axios from "axios";
 import "../styles/food.css";
+import { MenuItem, Select, FormControl, FormLabel, FormHelperText, InputLabel } from "@mui/material";
 
 
 export const Food = (props) => {
@@ -77,12 +78,21 @@ export const Food = (props) => {
           </div>
           <div className="f">
           {ingredient &&   <div className="ingredient">
-            <h4>Ingredients:</h4>
-          <select name="" id="">
+            <h2>Ingredients:</h2>
+            <FormControl>
+            <InputLabel id=''>click me</InputLabel>
+            <Select sx={{width: "150px"}}>
+            {ingredient && (ingredient.map(el => {
+        return <MenuItem>{el}</MenuItem>
+      }))}
+            </Select>
+            
+            </FormControl>
+          {/* <select name="" id="">
             {ingredient && (ingredient.map(el => {
         return <option>{el}</option>
       }))}
-      </select>
+      </select> */}
           </div>}
           </div>
         </div>

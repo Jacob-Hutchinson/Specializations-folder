@@ -4,12 +4,11 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 20vw;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .pcard {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: space-evenly;
 
