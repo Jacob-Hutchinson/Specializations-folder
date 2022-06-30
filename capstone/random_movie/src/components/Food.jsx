@@ -43,7 +43,7 @@ export const Food = (props) => {
         </Button>
       </div>
       {food && <div className="foodCard">
-      <div className="foodType">
+      {/* <div className="foodType">
         <form typeof="submit">
           <label htmlFor="food">Select by category</label>
           <select name="food" id="">
@@ -66,7 +66,7 @@ export const Food = (props) => {
             Get Category
           </Button>
         </form>
-      </div>
+      </div> */}
       {foodItem && (
         <div className="foodcard">
           <div className="f">

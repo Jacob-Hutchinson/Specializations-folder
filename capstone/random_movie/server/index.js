@@ -7,14 +7,16 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const {getPopMovie, genreMovie, getFood, addMovie, displayList, deleteMovie} = require('./controller')
+const {getPopMovie, genreMovie, getFood, addMovie, displayList, deleteMovie, addUser, checkUser, addMovie2, displayList2} = require('./controller')
 
 app.get('/movie', getPopMovie)
 app.post('/movie', genreMovie)
 app.get('/food', getFood)
-app.post('/list', addMovie)
-app.get('/list', displayList)
+app.post('/list', addMovie2)
+app.post('/displayList', displayList2)
 app.delete('/list/:id', deleteMovie)
+app.post('/signin', addUser)
+app.post('/login', checkUser)
 
 
 const {SERVER_PORT} = process.env  || 4004 

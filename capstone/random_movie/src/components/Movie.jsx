@@ -7,12 +7,13 @@ import { Providers } from './Providers'
 
 
 
+
 export const Movie = (props) => {
   const [movie, setMovie] = useState()
   const [genre, setGenre] = useState('')
   const [date, setDate] = useState('')
   const [date1, setDate1] = useState('')
-  const {route, setRoute} = props
+  const {route, setRoute, userID} = props
 
   useEffect(() => {
     setRoute('Movies')
@@ -50,9 +51,12 @@ export const Movie = (props) => {
   }
   const addList = e => {
     e.preventDefault()
-    axios.post('http://localhost:4004/list', {id: movie.id})
+    axios.post('http://localhost:4004/list', {id: movie.id, title: movie.title, image: movie.poster_path, UserID: userID})
     .then(res => {
-      
+      console.log(res)
+      if(res.data === 'tooManyMovies'){
+        alert('Too many movies in your list. Remove some movies from you list to add more.')
+      }
     })
   }
 
@@ -77,6 +81,7 @@ export const Movie = (props) => {
         </select>
         <label htmlFor="date">From</label>
         <input type="date" onChange={handledate}/>
+        
         <label htmlFor="date1">To</label>
         <input type="date"  onChange={handledate1}/>
       <Button variant="contained" color="primary" className='getButton' type='submit'>
@@ -86,10 +91,10 @@ export const Movie = (props) => {
       </div>
       <br />
       <MovieCard movie={movie} />
-      {movie &&
+      {movie ? userID ?
       <Button variant="contained" color="primary" onClick={addList}>
         Add to List
-      </Button>}
+      </Button> : <></> : <></>}
       {movie ? movie.results.US ?
       <Providers movie={movie}/> : <></> : <></>}
       <br />

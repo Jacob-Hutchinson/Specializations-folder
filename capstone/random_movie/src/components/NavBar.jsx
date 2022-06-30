@@ -4,7 +4,7 @@ import Button from '@mui/material/Button'
 import '../styles/navbar.css'
 
 export const NavBar = (props) => {
-    const {setRoute} = props
+    const {setRoute, userID} = props
     const handleClick = (str) => {
       console.log(str)
       setRoute(str.target.id)
@@ -27,9 +27,9 @@ export const NavBar = (props) => {
             </Button>
         </Link>
         <Link to={'/list'}>
-            <Button variant="outlined" color="primary" onClick={handleClick} id="List">
-              List
-            </Button>
+           {userID && <Button variant="outlined" color="primary" onClick={handleClick} id="List">
+              Watch-List
+            </Button>}
         </Link>
     </div>
   )
