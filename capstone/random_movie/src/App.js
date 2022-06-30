@@ -44,7 +44,7 @@ function App() {
       </Button></div>}
       <br/>
       </div>
-      <div>
+      <div id='login-form'>
       {login && <Login setLogin={setLogin} setUser={setUser} setUserID={setUserID}/>}
       {signIn && !login && <SignIn setSignIn={setSignIn} setUser={setUser}/>}
       </div>

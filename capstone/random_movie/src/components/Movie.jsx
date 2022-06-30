@@ -9,8 +9,6 @@ import { InputLabel, Select, MenuItem } from '@mui/material'
 // for date picker
 
 
-
-
 export const Movie = (props) => {
   const [movie, setMovie] = useState()
   const [genre, setGenre] = useState('')
@@ -103,10 +101,11 @@ export const Movie = (props) => {
           </Select>
         </FormControl>
         <label htmlFor="date">From</label>
-        <input type="date" onChange={handledate}/>
+        <input type="date" id='date' onChange={handledate}/>
         
         <label htmlFor="date1">To</label>
-        <input type="date"  onChange={handledate1}/>
+        <input type="date" id='date' onChange={handledate1}/>
+
       <Button variant="contained" color="primary" size='small' className='getButton' type='submit'>
         Generate Movie
       </Button>

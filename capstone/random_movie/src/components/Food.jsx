@@ -40,7 +40,7 @@ export const Food = (props) => {
       <div className="button">
         <h3>Find a recipe</h3>
         <Button variant="contained" color="primary" onClick={getFood}>
-          Get food
+          Get Recipe
         </Button>
       </div>
       {food && <div className="foodCard">
