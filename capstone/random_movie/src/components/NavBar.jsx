@@ -11,22 +11,22 @@ export const NavBar = (props) => {
     }
   return (
     <div className='bar'>
-        <Link to={'/'}>
+        <Link to={'/'} className='bar-button'>
             <Button variant="outlined" color="primary" onClick={handleClick} id='Home'>
               Home
             </Button>
         </Link>
-        <Link to={'/movie'}>
+        <Link to={'/movie'} className='bar-button'>
             <Button variant="outlined" color="primary" onClick={handleClick} id='Movies'>
               Movies
             </Button>
         </Link>
-        <Link to={'/food'}>
+        <Link to={'/food'} className='bar-button'>
             <Button variant="outlined" color="primary" onClick={handleClick} id='Food'>
               Food
             </Button>
         </Link>
-        <Link to={'/list'}>
+        <Link to={'/list'} className='bar-button'>
            {userID && <Button variant="outlined" color="primary" onClick={handleClick} id="List">
               Watch-List
             </Button>}

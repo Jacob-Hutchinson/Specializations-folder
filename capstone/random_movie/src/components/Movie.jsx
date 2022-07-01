@@ -56,7 +56,7 @@ export const Movie = (props) => {
     .then(res => {
       console.log(res)
       if(res.data === 'tooManyMovies'){
-        alert('Too many movies in your list. Remove some movies from you list to add more.')
+        alert('Too many movies in your list. Remove some movies from your list to add more.')
       }
     })
   }
@@ -70,6 +70,7 @@ export const Movie = (props) => {
       </Button> 
       <h2>OR</h2>
       <br />
+      <div className='genre'>
       <form className="selector" onSubmit={handleForm}>
         {/* <select name="genre" id="genre" onChange={handleGenre} style={{width: "125px"}} required>
         <option value=""></option>
@@ -88,7 +89,7 @@ export const Movie = (props) => {
           label="genre"
           onChange={handleGenre}
           required
-          sx={{width: "125px", height: "40px"}}
+          sx={{width: "125px", height: "40px", margin: "10px"}}
           >
             <MenuItem value=''></MenuItem>
             <MenuItem value='28'>Action</MenuItem>
@@ -110,6 +111,7 @@ export const Movie = (props) => {
         Generate Movie
       </Button>
       </form>
+      </div>
       </div>
       <br />
       <MovieCard movie={movie} />

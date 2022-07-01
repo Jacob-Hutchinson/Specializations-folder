@@ -28,11 +28,11 @@ axios.post('http://localhost:4004/signin', {userName: userName, password: passwo
   // this removes the sign-in form from the page
   setSignIn(false)
   // checks to see if there is a response from the data base and if so then set the user name to a usestate and alert that user has been added
-  if(res.data[0].user_name){
-  console.log(res, 'res data', res.data)
-  setUser(res.data[0].user_name)
-  alert('user ' + res.data[0].user_name + ' has been added!    NOW PLEASE LOG IN')
-  }else {alert('please try again')}
+  // if(res.data[0].user_name){
+  // console.log(res, 'res data', res.data)
+  // setUser(res.data[0].user_name)
+  // alert('user ' + res.data[0].user_name + ' has been added!    NOW PLEASE LOG IN')
+  // }else {alert('please try again')}
 })
 }
   return (

@@ -14,7 +14,7 @@ export const List = ({userID}) => {
       setMovieObj(res.data)
     })
   }, [load])
-  
+
   const deleteMovie = (e) => {
     axios.delete(`http://localhost:4004/list/${e.target.value}`)
     .then(res => {
@@ -31,7 +31,7 @@ export const List = ({userID}) => {
       alt='movie poster'/>
         </div>
         <div className="title">
-          <h2>{el.title}</h2>
+          <h2>{el.title.replace('~', "'")}</h2>
             </div>
       <Button variant="contained" color="primary" size='small' value={el.id} onClick={deleteMovie}>
         remove from list

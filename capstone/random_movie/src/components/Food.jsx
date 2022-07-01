@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import "../styles/food.css";
 import { MenuItem, Select, FormControl, FormLabel, FormHelperText, InputLabel } from "@mui/material";
+import { FoodCountry } from "./FoodCountry";
 
 
 export const Food = (props) => {
@@ -32,8 +33,26 @@ export const Food = (props) => {
       }
     });
   };
+  const handleCategory = (e) => {
+    e.preventDefault()
+    console.log(e.target[0].value)
+    setFood('true')
+    axios.post("http://localhost:4004/food", {category: e.target[0].value})
+    .then(res => {
+      if (foodItem) {
+        setFoodItem();
+        setFoodItem(res.data.meals[0]);
+      }
+      for (const ingredient in res.data.meals[0]) {
+        if (ingredient.includes("strIngredient"))
+          setIngredient((prevalue) => {
+            return [...prevalue, res.data.meals[0][ingredient]];
+          });
+      }
+    })
+  }
 
-  console.log(ingredient);
+  console.log(foodItem);
   return (
     <div className="food">
       <br />
@@ -42,10 +61,9 @@ export const Food = (props) => {
         <Button variant="contained" color="primary" onClick={getFood}>
           Get Recipe
         </Button>
-      </div>
-      {food && <div className="foodCard">
-      {/* <div className="foodType">
-        <form typeof="submit">
+        <br />
+        <br />
+        <form typeof="submit" onSubmit={handleCategory} style={{display: "flex"}}>
           <label htmlFor="food">Select by category</label>
           <select name="food" id="">
             <option value=""></option>
@@ -63,11 +81,14 @@ export const Food = (props) => {
             <option value="Lamb">Lamb</option>
             <option value="Pork">Pork</option>
           </select> <br />
-          <Button variant="contained" color="primary" typeof="submit">
+          <Button variant="contained" color="primary" size="small" type="submit" value='submit'>
             Get Category
           </Button>
         </form>
-      </div> */}
+        <h3>OR</h3>
+      <FoodCountry setFoodItem={setFoodItem} setIngredient={setIngredient} foodItem={foodItem} setFood={setFood}/>
+      </div>
+      {food && <div className="foodCard">
       {foodItem && (
         <div className="foodcard">
           <div className="f">
@@ -77,7 +98,7 @@ export const Food = (props) => {
           {foodItem && <h1>{foodItem.strMeal}</h1>}
           </div>
           <div className="f">
-          {ingredient &&   <div className="ingredient">
+          {/* {ingredient &&   <div className="ingredient">
             <h2>Ingredients:</h2>
             <FormControl>
             <InputLabel id=''>click me</InputLabel>
@@ -86,14 +107,8 @@ export const Food = (props) => {
         return <MenuItem>{el}</MenuItem>
       }))}
             </Select>
-            
             </FormControl>
-          {/* <select name="" id="">
-            {ingredient && (ingredient.map(el => {
-        return <option>{el}</option>
-      }))}
-      </select> */}
-          </div>}
+          </div>} */}
           </div>
         </div>
       )}

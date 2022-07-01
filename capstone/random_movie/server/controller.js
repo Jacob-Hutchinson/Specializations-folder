@@ -112,6 +112,34 @@ module.exports = {
       res.status(200).send(dbres.data)
     })
   },
+  categoryFood: (req, res) => {
+    console.log(req.body)
+    const {category} = req.body
+    axios.get(`http://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+    .then(dbres => {
+      //this get a random obj from the category response
+      const randomMealID = (Math.random() * dbres.data.meals.length) | 0
+      console.log(dbres.data.meals[randomMealID].idMeal)
+      axios.get(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${dbres.data.meals[randomMealID].idMeal}`)
+      .then(dbres2 => {
+        console.log(dbres2.data)
+        res.send(dbres2.data)
+      })
+    })
+  },
+  countryFood: (req, res) => {
+    const {country} = req.body
+    axios.get(`http://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
+        .then(dbres => {
+          const randomMealID = (Math.random() * dbres.data.meals.length) | 0
+      console.log(dbres.data.meals[randomMealID].idMeal)
+      axios.get(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${dbres.data.meals[randomMealID].idMeal}`)
+      .then(dbres2 => {
+        console.log(dbres2.data)
+        res.send(dbres2.data)
+      })
+        })
+  },
   // this was the first add movie functions
   addMovie: (req, res) => {
     const {id} = req.body
@@ -204,7 +232,8 @@ module.exports = {
     })
   }
   , addMovie2: (req, res) => {
-    const {title, image, UserID} = req.body
+    let {title, image, UserID} = req.body
+    title = title.replace("'", '~')
     console.log(title, image, UserID)
     sequelize.query(`
     select * from movie_info2
@@ -212,9 +241,11 @@ module.exports = {
     `)
     .then(sqlres => {
       if(sqlres[0].length <= 9){
+        console.log('hit the insert one')
         sequelize.query(`
         insert into movie_info2(title, image, user_id)
-        valueS('${title}', '${image}', ${UserID});
+        values('${title}', '${image}', ${UserID});
+        
         select * from movie_info2;
         `)
         .then(dbres => {
