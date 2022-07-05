@@ -2,6 +2,7 @@
   "name": "random_movie",
   "version": "0.1.0",
   "private": true,
+  "main": "./server/index.js",
   "dependencies": {
     "@auth0/auth0-react": "^1.10.1",
     "@date-io/date-fns": "^2.14.0",
@@ -29,7 +30,7 @@
   },
   "scripts": {
     "dev": "concurrently \"npm start\"  \"cd server && nodemon\"",
-    "start": "react-scripts start",
+    "start": "node ./server/index.js && npm build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
