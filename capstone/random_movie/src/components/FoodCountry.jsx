@@ -27,7 +27,7 @@ export const FoodCountry = (props) => {
     <div style={{MARGIN:"25PX"}}>
         <form style={{display:'flex'}} type='submit' onSubmit={handleCountry}>
         <label htmlFor="country">select based on Country</label>
-        <select name="country" id="">
+        <select name="country" id="" required>
             <option value="American">American</option>
             <option value="British">British</option>
             <option value="Canadian">Canadian</option>
@@ -45,7 +45,7 @@ export const FoodCountry = (props) => {
             <option value="Unknown">Unknown</option>
         </select>
         <Button variant="contained" color="primary" type='submit'>
-          Get food
+          Get Recipe
         </Button>
         </form>
     </div>

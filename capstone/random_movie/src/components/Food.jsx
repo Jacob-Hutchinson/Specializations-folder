@@ -112,16 +112,18 @@ export const Food = (props) => {
           </div>
         </div>
       )}
+      {foodItem.strSource &&
       <h2>{foodItem.strMeal}-
       <a href={foodItem.strSource} rel="none" target="_blank">
         Recipe Link
       </a>
-      </h2>
-      <h2>{foodItem.strMeal}
+      </h2>}
+      {foodItem.strYoutube &&
+      <h2>{foodItem.strMeal}-
       <a href={foodItem.strYoutube} rel="none" target="_blank">
-         Video Link
+         Recipe Video Link
       </a>
-      </h2>
+      </h2>}
       </div>}
     </div>
   );

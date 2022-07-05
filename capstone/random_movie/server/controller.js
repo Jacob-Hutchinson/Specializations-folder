@@ -148,7 +148,7 @@ module.exports = {
     select * from movieId;
     `)
     .then(sqlres => {
-      if(sqlres[0].length <= 10){
+      if(sqlres[0].length <= 20){
         sequelize.query(`
         insert into movieID(movie_id)
         values(${id})
@@ -240,7 +240,7 @@ module.exports = {
     where user_id = ${UserID};
     `)
     .then(sqlres => {
-      if(sqlres[0].length <= 9){
+      if(sqlres[0].length <= 19){
         console.log('hit the insert one')
         sequelize.query(`
         insert into movie_info2(title, image, user_id)
@@ -251,7 +251,7 @@ module.exports = {
         .then(dbres => {
             res.status(200).send(dbres[0])
         })
-      }else if(sqlres[0].length >= 9){
+      }else if(sqlres[0].length >= 19){
         res.status(200).send('tooManyMovies')
       }
     })
