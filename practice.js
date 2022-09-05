@@ -29,3 +29,15 @@
 //     .join("");
 // }
 // console.log(squareDigits(9119));
+
+//kuy 8
+// function betterThanAverage(classPoints, yourPoints) {
+//   let total = 0;
+//   classPoints.push(yourPoints);
+//   classPoints.forEach((grade) => {
+//     total += grade;
+//   });
+//   let average = total / classPoints.length;
+//   return yourPoints > average ? true : false;
+// }
+// console.log(betterThanAverage([2, 3], 5));
