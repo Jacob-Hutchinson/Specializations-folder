@@ -41,3 +41,12 @@
 //   return yourPoints > average ? true : false;
 // }
 // console.log(betterThanAverage([2, 3], 5));
+
+//kuy 7
+function oddOrEven(array) {
+  let num = array.reduce((a, b) => {
+    return a + b;
+  }, 0);
+  return num % 2 === 0 ? "even" : "odd";
+}
+console.log(oddOrEven([0, 3]));
