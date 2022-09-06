@@ -43,10 +43,37 @@
 // console.log(betterThanAverage([2, 3], 5));
 
 //kuy 7
-function oddOrEven(array) {
-  let num = array.reduce((a, b) => {
-    return a + b;
-  }, 0);
-  return num % 2 === 0 ? "even" : "odd";
+// function oddOrEven(array) {
+//   let num = array.reduce((a, b) => {
+//     return a + b;
+//   }, 0);
+//   return num % 2 === 0 ? "even" : "odd";
+// }
+// console.log(oddOrEven([0, 3]));
+
+//kuy 8
+// function feast(beast, dish) {
+//   if (
+//     beast[0] === dish[0] &&
+//     beast[beast.length - 1] === dish[dish.length - 1]
+//   ) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+//   return (
+//     beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+//   );
+// }
+// console.log(feast("great blue heron", "garlic naan"));
+
+//kuy 8
+function countBy(x, n) {
+  let z = [];
+  z.push(x);
+  for (let i = 0; i < n - 1; i++) {
+    z.push(z[z.length - 1] + x);
+  }
+  return z;
 }
-console.log(oddOrEven([0, 3]));
+console.log(countBy(2, 5));
