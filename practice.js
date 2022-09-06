@@ -68,12 +68,37 @@
 // console.log(feast("great blue heron", "garlic naan"));
 
 //kuy 8
-function countBy(x, n) {
-  let z = [];
-  z.push(x);
-  for (let i = 0; i < n - 1; i++) {
-    z.push(z[z.length - 1] + x);
-  }
-  return z;
-}
-console.log(countBy(2, 5));
+// function countBy(x, n) {
+//   let z = [];
+//   z.push(x);
+//   for (let i = 0; i < n - 1; i++) {
+//     z.push(z[z.length - 1] + x);
+//   }
+//   return z;
+// }
+// console.log(countBy(2, 5));
+
+//kuy 8
+// function booleanToString(b) {
+//   return b.toString();
+// }
+
+//kuy 7
+// function nbDig(n, d) {
+//   let answer = 0;
+//   let arr = [];
+//   for (let i = 0; i < n + 1; i++) {
+//     arr.push(i * i);
+//   }
+//   let results = arr.filter((num) => num.toString().includes(d));
+//   results.map((num) => {
+//     let str = num.toString();
+//     for (const s of str) {
+//       if (s == d) {
+//         answer++;
+//       }
+//     }
+//   });
+//   return answer;
+// }
+// console.log(nbDig(25, 0));
