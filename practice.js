@@ -171,3 +171,28 @@
 //   }
 // };
 // console.log(quarterOf(11));
+
+//kuy 6
+// function duplicateEncode(word) {
+//   let left = [];
+//   word
+//     .toLowerCase()
+//     .split("")
+//     .sort()
+//     .map((element, index, array) => {
+//       if (element === array[index + 1]) {
+//         left.push(element);
+//       }
+//     });
+//   left = left.join("").toLowerCase().split("");
+//   let answer = [];
+//   word.split("").map((element, index) => {
+//     if (left.includes(element.toLowerCase())) {
+//       answer.push(")");
+//     } else {
+//       answer.push("(");
+//     }
+//   });
+//   return answer.join("");
+// }
+// console.log(duplicateEncode("(( @"));
