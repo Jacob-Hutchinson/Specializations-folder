@@ -131,3 +131,29 @@
 //   return array.map((str, index) => `${index + 1}: ${str}`);
 // };
 // console.log(number(["a", "b", "c"]));
+
+//kuy 6
+// function comp(array1, array2) {
+//   if (array2 == null || array1 == null) {
+//     return false;
+//   }
+//   array2.forEach((num) => {
+//     let remove = 0;
+//     if (array1.includes(Math.sqrt(num))) {
+//       remove = array1.indexOf(Math.sqrt(num));
+//       array1.splice(remove, 1);
+//     } else {
+//       answer = true;
+//     }
+//   });
+//   return array1.length ? false : true;
+// }
+// console.log(
+//   comp(
+//     [7, 6, 1, 3, 3, 4, 3, 3, 5, 10, 0, 2, 8, 2, 2, 0, 0, 4, 9, 1, 9, 10, 10],
+//     [
+//       16, 25, 100, 1, 9, 100, 81, 49, 9, 100, 64, 4, 4, 1, 0, 36, 0, 9, 16, 9,
+//       1, 81, 4,
+//     ]
+//   )
+// );
