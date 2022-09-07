@@ -125,3 +125,9 @@
 //   return answer;
 // };
 // console.log(countSheep(3));
+
+//kuy 7
+// var number = function (array) {
+//   return array.map((str, index) => `${index + 1}: ${str}`);
+// };
+// console.log(number(["a", "b", "c"]));
