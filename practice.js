@@ -115,3 +115,13 @@
 //   min([4, 6, 2, 1, 9, 63, -134, 566]),
 //   max([4, 6, 2, 1, 9, 63, -134, 566])
 // );
+
+//kuy 8
+// var countSheep = function (num) {
+//   let answer = "";
+//   for (let i = 1; i < num + 1; i++) {
+//     answer += `${i} sheep...`;
+//   }
+//   return answer;
+// };
+// console.log(countSheep(3));
