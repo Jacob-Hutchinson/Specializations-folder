@@ -221,3 +221,32 @@
 // console.log(
 //   reverseWords("The greatest victory is that which requires no battle")
 // );
+
+// kuy 8
+// function correct(string) {
+//   return string
+//     .split("")
+//     .map((element) => {
+//       console.log(element);
+//       if (element == 1) {
+//         return (element = "I");
+//       } else if (element == 5) {
+//         return (element = "S");
+//       } else if (element == " ") {
+//         return element;
+//       } else if (element == 0) {
+//         return (element = "O");
+//       } else {
+//         return element;
+//       }
+//     })
+//     .join("");
+// }
+// console.log(correct("par15"));
+
+//kuy 8
+// const stringToNumber = function (str) {
+//   return +str;
+// };
+
+//kuy
