@@ -196,3 +196,28 @@
 //   return answer.join("");
 // }
 // console.log(duplicateEncode("(( @"));
+
+// kuy 6
+// function persistence(num) {
+//   let count = 0;
+//   while (num > 9) {
+//     count++;
+//     num = num
+//       .toString()
+//       .split("")
+//       .map((str) => +str)
+//       .reduce((a, b) => {
+//         return a * b;
+//       }, 1);
+//   }
+//   return count;
+// }
+// console.log(persistence(1));
+
+//kuy 8
+// function reverseWords(str) {
+//   return str.split(" ").reverse().join(" ");
+// }
+// console.log(
+//   reverseWords("The greatest victory is that which requires no battle")
+// );
