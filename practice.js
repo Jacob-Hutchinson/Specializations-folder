@@ -260,3 +260,17 @@
 //   return total;
 // }
 // console.log(rentalCarCost(6));
+
+// kuy 7
+// function calculateYears(principal, interest, tax, desired) {
+//   let years = 0;
+//   let subTax = 0;
+//   while (principal < desired) {
+//     years++;
+//     subTax = principal * interest;
+//     principal = principal + principal * interest;
+//     principal = principal - subTax * tax;
+//   }
+//   return years;
+// }
+// console.log(calculateYears(1000, 0.05, 0.18, 1100));
