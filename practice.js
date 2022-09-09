@@ -249,4 +249,14 @@
 //   return +str;
 // };
 
-//kuy
+//kuy 8
+// function rentalCarCost(d) {
+//   let total = d * 40;
+//   if (d < 7 && d > 2) {
+//     total -= 20;
+//   } else if (d >= 7) {
+//     total -= 50;
+//   }
+//   return total;
+// }
+// console.log(rentalCarCost(6));
