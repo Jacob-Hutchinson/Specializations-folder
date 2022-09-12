@@ -274,3 +274,20 @@
 //   return years;
 // }
 // console.log(calculateYears(1000, 0.05, 0.18, 1100));
+
+//kuy 8
+// String.prototype.toAlternatingCase = function (str) {
+//   return this.split("")
+//     .map((el) => {
+//       if (el === el.toUpperCase()) {
+//         return el.toLowerCase();
+//       } else if (el === el.toLowerCase()) {
+//         return el.toUpperCase();
+//       } else {
+//         return el;
+//       }
+//     })
+//     .join("");
+// };
+
+// console.log("hello World".toAlternatingCase());
