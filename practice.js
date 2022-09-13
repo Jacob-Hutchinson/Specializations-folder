@@ -352,4 +352,20 @@
 // }
 // console.log(switchItUp(2));
 
-//kuy
+//kuy 8
+// const reverseSeq = (n) => {
+//   let result = [];
+//   for (let i = n; i > 0; i--) {
+//     result.push(i);
+//   }
+//   return result;
+// };
+// console.log(reverseSeq(5));
+
+//kuy 7
+// String.prototype.toJadenCase = function () {
+//   return this.split(" ")
+//     .map((str) => str.charAt(0).toUpperCase() + str.slice(1))
+//     .join(" ");
+// };
+// console.log("How can mirrors be real if our eyes aren't real".toJadenCase());
