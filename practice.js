@@ -291,3 +291,22 @@
 // };
 
 // console.log("hello World".toAlternatingCase());
+
+//kuy 8 --failed to hit conditionals
+// function sumArray(array) {
+//   if (array === null || array.length < 3) {
+//     return 0;
+//   }
+//   let max = Math.max(...array);
+//   let min = Math.min(...array);
+//   array.splice(array.indexOf(max), 1);
+//   array.splice(array.indexOf(min), 1);
+//   return array.reduce((previous, current) => previous + current, 0);
+// }
+// console.log(sumArray([1, null]));
+
+//kuy 8
+// function sumMix(x) {
+//   return x.map((num) => +num).reduce((pre, cur) => pre + cur, 0);
+// }
+// console.log(sumMix([9, 3, "7", "3"]));
