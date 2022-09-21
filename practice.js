@@ -369,3 +369,8 @@
 //     .join(" ");
 // };
 // console.log("How can mirrors be real if our eyes aren't real".toJadenCase());
+
+//kuy 8
+// function greet(name) {
+//   return `Hello, ${name} how are you doing today?`;
+// }
