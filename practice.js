@@ -374,3 +374,26 @@
 // function greet(name) {
 //   return `Hello, ${name} how are you doing today?`;
 // }
+// kuy 7
+// function getSum(a, b) {
+//   let answer = 0;
+//   if (a === b) {
+//     return a;
+//   } else if (a <= b) {
+//     while (a <= b) {
+//       console.log("hit");
+//       console.log(a, b);
+//       answer += a;
+//       a++;
+//     }
+//   } else if (b <= a) {
+//     while (b <= a) {
+//       console.log(a, b);
+//       answer += b;
+//       b++;
+//     }
+//   }
+//   return answer;
+// }
+
+// console.log(getSum(-1, 2));
